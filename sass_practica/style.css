@@ -1,0 +1,60 @@
+/* This comment is
+ * more than one line long
+ * since it uses the CSS comment syntax,
+ * it will appear in the CSS output. */
+@import url(style.css);
+@import "http://tutorialspoint.com/bar";
+@import url(style);
+@import "style" screen;
+#first {
+  background-color: #00FFFF;
+  color: #C0C0C0; }
+
+.style {
+  width: 900px; }
+  @media screen and (orientation: portrait) {
+    .style {
+      width: 500px;
+      margin-left: 120px; } }
+
+#first p {
+  width: 10em; }
+
+.container h1 {
+  font-size: 25px;
+  color: #E45456; }
+.container p {
+  font-size: 25px;
+  color: #3C7949; }
+.container a {
+  font-size: 20px; }
+  .container a:hover {
+    background-color: yellow; }
+.container .line {
+  font-family: Lucida Sans Unicode;
+  font-size: 20px;
+  font-weight: bold;
+  font-variant: small-caps; }
+.container .box h1 {
+  font-size: 25px;
+  color: #E45456; }
+.container .box p {
+  font-size: 25px;
+  color: #3C7949; }
+
+.frst_para, .sec_para {
+  color: #008000; }
+
+.sec_para {
+  font-size: 20px; }
+
+p.estiloDos {
+  color: blue; }
+
+h2 {
+  color: green; }
+
+#set_width {
+  padding-left: 95px; }
+
+/*# sourceMappingURL=style.css.map */

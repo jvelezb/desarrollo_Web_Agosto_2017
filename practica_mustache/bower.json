@@ -1,0 +1,13 @@
+{
+  "name": "tarea_Demo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mustache.js": "mustache#^2.3.0"
+  }
+}

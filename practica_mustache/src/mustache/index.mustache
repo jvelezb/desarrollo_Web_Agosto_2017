@@ -1,0 +1,19 @@
+{{> header }}  
+
+   <div class="clasePrueba">  
+      <h1>{{ title }}</h1>  
+
+      <h2>estilos con if</h2>
+      <p> este es el listado de caracteristicas</p>
+      <a href="http://micampus.ccm.itesm.mx/">Mi Campus</a>  
+      <ul class="listado">
+         {{# features }}
+         <li>{{ item }}</li>
+         {{/ features }}
+      </ul>
+      <p class="listadoHijo">estilos con el hijo</p>
+      <p class="estiloVar">estilo variable</p>
+   </div>
+   {{> listado}}
+
+{{> footer }}

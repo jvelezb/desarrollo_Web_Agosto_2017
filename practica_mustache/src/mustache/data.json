@@ -1,0 +1,15 @@
+{
+	"title" : "Tarea prueba",
+	"features" : [
+		{ "item" : "PRueba 1" },
+		{ "item" : "tarea 2" },
+		{ "item" : "tarea3" },
+		{ "item" : "hola mundo" }
+	],
+	"alumnos" : [
+		{"nombre":"Juan","matricula":"23423"},
+		{"nombre":" ruben","matricula":"53453452"},
+		{"nombre":"Rodrigo","matricula":"1111"}
+	]
+
+}
