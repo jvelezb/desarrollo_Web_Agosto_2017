@@ -35,13 +35,14 @@
     "watchify": "^3.2.1"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
     "foundation-sites": "^6.0.6",
     "jquery": "^2.1.4"
   },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.js",
     "foundation": "./node_modules/foundation-sites/js/foundation.js",
-    "mustache":"./node_modules/mustache/mustache.js"
+    "mustache": "./node_modules/mustache/mustache.js"
   },
   "browserify-shim": {
     "jquery": "$",

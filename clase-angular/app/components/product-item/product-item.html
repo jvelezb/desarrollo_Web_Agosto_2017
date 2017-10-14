@@ -1,0 +1,12 @@
+<div class="thumbnail">
+  <img [src]="product.imagen">
+  <div class="caption">
+    <h4 class="pull-right">{{ product.precio | currency }}</h4>
+    <h4><a [routerLink]="['/products', product.id]">{{ product.nombre }}</a></h4>
+    <p>{{ product.descripcion }}</p>
+  </div>
+  <div class="ratings">
+    <rating-calificaciones [rating]="product.rating"></rating-calificaciones>
+  </div>
+</div>
+

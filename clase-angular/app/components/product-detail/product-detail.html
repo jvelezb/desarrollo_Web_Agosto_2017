@@ -1,0 +1,37 @@
+<div class="thumbnail">
+    <img [src]="product.imagen">
+    <div>
+        <h4 class="pull-right">{{ product.precio }}</h4>
+        <h4>{{ product.nombre }}</h4>
+        <p>{{ product.descripcion }}</p>
+    </div>
+    <div class="ratings">
+        <p class="pull-right">{{ reviews.length }} reviews</p>
+        <p><rating-calificaciones [rating]="product.rating" ></rating-calificaciones></p>
+    </div>
+</div>
+<div class="well" id="reviews-anchor">
+    <div class="row">
+        <div class="col-md-12"></div>
+    </div>
+    <div class="text-right">
+        <button (click)="isReviewHidden = !isReviewHidden"
+                class="btn btn-success btn-green">Comentario</button>
+    </div>
+
+    <div [hidden]="isReviewHidden">
+        <div><rating-calificaciones [(rating)]="newRating" [readonly]="false" class="large"></rating-calificaciones></div>
+        <div><textarea [(ngModel)]="newComment"></textarea></div>
+        <div><button (click)="addReview()" class="btn">Añade comentario</button></div>
+    </div>
+
+    <div class="row" *ngFor="let review of reviews">
+        <hr>
+        <div class="col-md-12">
+            <rating-calificaciones [rating]="review.rating"></rating-calificaciones>
+            <span>{{ review.usuario }}</span>
+            <span class="pull-right">{{ review.timestamp | date: 'shortDate' }}</span>
+            <p>{{ review.comentarios }}</p>
+        </div>
+    </div>
+</div>

@@ -2,10 +2,11 @@
  * hola estos son comentarios
  */
 $fontSize: 20px;
-
+@import "bootstrap";
 
  .clasePrueba{
  	h1{
+
  		font-size: 60px;
  	}
  	p{

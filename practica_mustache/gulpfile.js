@@ -39,6 +39,7 @@ function bundle() {
     .pipe(browserSync.stream());
 }
 
+
 // html
 gulp.task('html', function() {
   return gulp.src('./src/templates/**/*')
@@ -49,14 +50,28 @@ gulp.task('html', function() {
 
 // sass
 gulp.task('sass', function() {
-  return gulp.src('./src/scss/**/*.scss')
-    .pipe(sass())
+  return gulp.src('./src/scss/**/*.scss','')
+    .pipe(sass({
+      includePaths:['./node_modules/bootstrap/scss/']
+    }))
+
     .on('error', onError)
     .pipe(prod ? minifycss() : gutil.noop())
     .pipe(gulp.dest('./build/stylesheets'))
     .pipe(browserSync.stream());
 });
 
+gulp.task('bootstrap',function(){
+  gulp.src("./node_modules/bootstrap/dist/css/bootstrap.css")
+  .pipe(gulp.dest("./build/stylesheets/"))
+  .pipe(browserSync.stream());
+  gulp.src("./node_modules/bootstrap/dist/js/*.js")
+  .pipe(gulp.dest("./build/js/"))
+  .pipe(browserSync.stream());
+  gulp.src("./node_modules/jquery/dist/jquery.min.js")
+  .pipe(gulp.dest("./build/js/"))
+  .pipe(browserSync.stream());
+});
 // mustache
 gulp.task('mustache', function() {
   gulp.src("./src/mustache/*.mustache")
@@ -84,4 +99,8 @@ gulp.task('serve', function() {
 });
 
 // use gulp-sequence to finish building html, sass and js before first page load
-gulp.task('default', gulpSequence(['html', 'sass', 'mustache', 'js'], 'serve'));
+gulp.task('default', gulpSequence(['bootstrap','html', 'sass', 'mustache', 'js'], 'serve'));
+
+
+
+
