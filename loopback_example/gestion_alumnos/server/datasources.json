@@ -1,0 +1,14 @@
+{
+
+	"mongodb_conn": {
+		"host":"localhost",
+		"port":27017,
+		"url":"",
+		"database":"test",
+		"user":"usuario_db",
+		"name":"Usuario DB",
+		"password": "pass",
+		"connector":"mongodb"
+
+	}
+}
